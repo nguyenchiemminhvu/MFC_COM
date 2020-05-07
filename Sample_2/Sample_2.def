@@ -1,0 +1,10 @@
+; Sample_2.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Sample_2"
+DESCRIPTION  'Sample_2 Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	DllCanUnloadNow PRIVATE
+	DllGetClassObject PRIVATE
+	DllRegisterServer PRIVATE

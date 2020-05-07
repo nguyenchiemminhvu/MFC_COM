@@ -2,3 +2,7 @@
 /Sample/*.ncb
 /Sample_1/*.ncb
 /Sample_1/Debug
+/Sample_2_Client/*.ncb
+/Sample_2_Client/Debug
+/Sample_2/*.ncb
+/Sample_2/Debug

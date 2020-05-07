@@ -1,0 +1,16 @@
+// Sample_2.odl : type library source for Sample_2.dll
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (Sample_2.tlb).
+
+[ uuid(1884172C-B035-4925-88E6-43B4690EB797), version(1.0) ]
+library Sample_2
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

@@ -83,10 +83,26 @@ LINK32=link.exe
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\Client.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\SpaceShip.cpp
+# End Source File
 # End Group
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\Interface.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\SpaceShip.h
+# End Source File
 # End Group
 # Begin Group "Resource Files"
 

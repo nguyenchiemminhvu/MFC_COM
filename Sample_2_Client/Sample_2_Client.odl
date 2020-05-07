@@ -1,0 +1,42 @@
+// Sample_2_Client.odl : type library source for Sample_2_Client.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (Sample_2_Client.tlb).
+
+[ uuid(7BD837BD-7A46-4607-9D98-4F31DBACF838), version(1.0) ]
+library Sample_2_Client
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CSample_2_ClientDoc
+	
+	[ uuid(5F2C89D3-A917-42FE-84F3-76E4B7A123C9) ]
+	dispinterface ISample_2_Client
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CSample_2_ClientDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CSample_2_ClientDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CSample_2_ClientDoc
+	
+	[ uuid(D00BA042-B195-41BE-B5E0-8A1BA2BCD48D) ]
+	coclass Document
+	{
+		[default] dispinterface ISample_2_Client;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

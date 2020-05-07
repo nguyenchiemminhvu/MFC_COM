@@ -106,6 +106,10 @@ SOURCE=.\Sample_2.rc
 # End Source File
 # Begin Source File
 
+SOURCE=.\Spaceship.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\StdAfx.cpp
 # ADD CPP /Yc"stdafx.h"
 # End Source File
@@ -115,11 +119,19 @@ SOURCE=.\StdAfx.cpp
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
+SOURCE=.\Interface.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\Resource.h
 # End Source File
 # Begin Source File
 
 SOURCE=.\Sample_2.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Spaceship.h
 # End Source File
 # Begin Source File
 

@@ -21,7 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
     // 1. Initialize the COM library (make Windows load the DLLs). Normally you would
     // call this in your InitInstance() or other startup code.  In MFC apps, use
-    //  AfxOleInit() instead.</FONT>
+    //  AfxOleInit() instead.
     CoInitialize ( NULL );
 	
 	// 2. Create a COM object, using the Active Desktop coclass provided by the shell.
@@ -54,6 +54,24 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		// 5. Release the interface.
 		pIAD->Release();
+
+		// *****************************************************************************
+		IShellLink *pSL;
+		hr = CoCreateInstance(CLSID_ShellLink, NULL, CLSCTX_INPROC_SERVER, IID_IShellLink, (void**)&pSL);
+		if(SUCCEEDED(hr))
+		{
+			pSL->SetPath(wszWallpaper);
+
+			IPersistFile *pPF;
+			hr = pSL->QueryInterface(IID_IPersistFile, (void**)&pPF);
+			if (SUCCEEDED(hr))
+			{
+				pPF->Save(L"D:/Theme.lnk", FALSE);
+				pPF->Release();
+			}
+		}
+
+		// *****************************************************************************/
     }
     else
     {

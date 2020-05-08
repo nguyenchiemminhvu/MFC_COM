@@ -1,0 +1,75 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (549dca46).
+//
+// e:\projects\mfc_com\ncmv_mathclient\debug\IMath.tlh
+//
+// C++ source equivalent of Win32 type library IMath.tlb
+// compiler-generated file created 05/08/20 at 14:36:24 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace NCMV_MathLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("1221db62-f3d8-11d4-825d-00104b3646c0"))
+/* interface */ IMath;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMath, __uuidof(IMath));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("1221db62-f3d8-11d4-825d-00104b3646c0"))
+IMath : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long Add (
+        long a,
+        long b );
+    long Sub (
+        long a,
+        long b );
+    long Mul (
+        long a,
+        long b );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Add (
+        long a,
+        long b,
+        long * outBuffer ) = 0;
+    virtual HRESULT __stdcall raw_Sub (
+        long a,
+        long b,
+        long * outBuffer ) = 0;
+    virtual HRESULT __stdcall raw_Mul (
+        long a,
+        long b,
+        long * outBuffer ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "e:\projects\mfc_com\ncmv_mathclient\debug\IMath.tli"
+
+} // namespace NCMV_MathLib
+
+#pragma pack(pop)

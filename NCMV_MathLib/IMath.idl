@@ -1,0 +1,25 @@
+import "unknwn.idl";
+
+[
+	object,
+	uuid(1221db62-f3d8-11d4-825d-00104b3646c1),
+	helpstring("Interface for basic calculation")
+]
+interface IMath : IUnknown
+{
+	HRESULT Add([in] long a, [in] long b, [out, retval] long *outBuffer);
+	HRESULT Sub([in] long a, [in] long b, [out, retval] long *outBuffer);
+	HRESULT Mul([in] long a, [in] long b, [out, retval] long *outBuffer);
+};
+
+[
+	uuid(3ff1aab8-f3d8-11d4-825d-00104b3646c1),
+	helpstring("Interfaces for math algorithms")
+]
+library NCMV_MathLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	interface IMath;
+}

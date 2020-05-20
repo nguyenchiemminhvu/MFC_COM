@@ -1,0 +1,27 @@
+HKCR
+{
+	SimpleATLCom.SimpleCom.1 = s 'SimpleCom Class'
+	{
+		CLSID = s '{1F75D981-7F55-4A95-A51F-4CFE31C0C4C3}'
+	}
+	SimpleATLCom.SimpleCom = s 'SimpleCom Class'
+	{
+		CLSID = s '{1F75D981-7F55-4A95-A51F-4CFE31C0C4C3}'
+		CurVer = s 'SimpleATLCom.SimpleCom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1F75D981-7F55-4A95-A51F-4CFE31C0C4C3} = s 'SimpleCom Class'
+		{
+			ProgID = s 'SimpleATLCom.SimpleCom.1'
+			VersionIndependentProgID = s 'SimpleATLCom.SimpleCom'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{9492F8CD-96AA-49D6-A8FF-B0EA57CA717F}'
+		}
+	}
+}

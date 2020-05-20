@@ -1,0 +1,56 @@
+// SimpleATLCom.idl : IDL source for SimpleATLCom
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SimpleATLCom.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(33DBBDAD-86F6-4AD5-8C8D-B571C7A5CBCF),
+	dual,
+	nonextensible,
+	helpstring("ISimpleCom Interface"),
+	pointer_default(unique)
+]
+interface ISimpleCom : IDispatch
+{
+	[id(1), helpstring("method Calculate")] HRESULT Calculate([out,retval] LONG* totalScore);
+	[propget, id(2), helpstring("property ComScore")] HRESULT ComScore([out, retval] LONG* pVal);
+	[propput, id(2), helpstring("property ComScore")] HRESULT ComScore([in] LONG newVal);
+	[propget, id(3), helpstring("property AtlScore")] HRESULT AtlScore([out, retval] LONG* pVal);
+	[propput, id(3), helpstring("property AtlScore")] HRESULT AtlScore([in] LONG newVal);
+	[propget, id(4), helpstring("property studentName")] HRESULT studentName([out, retval] BSTR* pVal);
+	[propput, id(4), helpstring("property studentName")] HRESULT studentName([in] BSTR newVal);
+};
+
+[
+	uuid(9492F8CD-96AA-49D6-A8FF-B0EA57CA717F),
+	version(1.0),
+	helpstring("SimpleATLCom 1.0 Type Library")
+]
+library SimpleATLComLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(58F34D87-00B2-4B67-826C-A54C8F70C4C0),
+		helpstring("_ISimpleComEvents Interface")
+	]
+	dispinterface _ISimpleComEvents
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(1F75D981-7F55-4A95-A51F-4CFE31C0C4C3),
+		helpstring("SimpleCom Class")
+	]
+	coclass SimpleCom
+	{
+		[default] interface ISimpleCom;
+		[default, source] dispinterface _ISimpleComEvents;
+	};
+};

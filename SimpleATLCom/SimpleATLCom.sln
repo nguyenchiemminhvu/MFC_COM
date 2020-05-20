@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleATLCom", "SimpleATLCom.vcproj", "{DDF9F25E-41EF-4FCE-A330-B74A134C7C5F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleATLComPS", "SimpleATLComPS.vcproj", "{A289B928-B9B8-4361-BA33-3D1519B80EE8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DDF9F25E-41EF-4FCE-A330-B74A134C7C5F} = {DDF9F25E-41EF-4FCE-A330-B74A134C7C5F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDF9F25E-41EF-4FCE-A330-B74A134C7C5F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DDF9F25E-41EF-4FCE-A330-B74A134C7C5F}.Debug|Win32.Build.0 = Debug|Win32
+		{DDF9F25E-41EF-4FCE-A330-B74A134C7C5F}.Release|Win32.ActiveCfg = Release|Win32
+		{DDF9F25E-41EF-4FCE-A330-B74A134C7C5F}.Release|Win32.Build.0 = Release|Win32
+		{A289B928-B9B8-4361-BA33-3D1519B80EE8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A289B928-B9B8-4361-BA33-3D1519B80EE8}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

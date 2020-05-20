@@ -8,3 +8,5 @@
 /Sample_2/Debug
 /TestCOM/Debug
 /TestCOM/TestCOM.ncb
+/SimpleATLCom/*.ncb
+/SimpleATLCom_NET/*.ncb

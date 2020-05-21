@@ -26,24 +26,6 @@ interface IAddition : IDispatch
 };
 
 [
-	object,
-	uuid(4D8093DC-CE8A-49ED-B245-EF66111F1A2E),
-	dual,
-	nonextensible,
-	helpstring("IMultiplication Interface"),
-	pointer_default(unique)
-]
-interface IMultiplication : IDispatch
-{
-	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] BSTR* pVal);
-	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] BSTR newVal);
-	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] BSTR* pVal);
-	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] BSTR newVal);
-
-	[id(3), helpstring("method Calculate")] HRESULT Calculate([out,retval] BSTR* _result);
-};
-
-[
 	uuid(76E29B3A-290D-4DAE-AB25-641E8DDD60EC),
 	version(1.0),
 	helpstring("COMBigInt 1.0 Type Library")
@@ -59,14 +41,5 @@ library COMBigIntLib
 	coclass Addition
 	{
 		[default] interface IAddition;
-	};
-
-	[
-		uuid(04DD5F6B-7977-40F7-92F4-85D305557A15),
-		helpstring("Multiplication Class")
-	]
-	coclass Multiplication
-	{
-		[default] interface IMultiplication;
 	};
 };

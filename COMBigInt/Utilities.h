@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -21,6 +22,5 @@ std::string BStrToSTDStr(BSTR src);
 BSTR STDStrToBStr(std::string src);
 
 std::string sumTwoBigInteger(std::string a, std::string b);
-std::string multiplyTwoStrings(std::string s1, std::string s2);
 
 #endif // __UTILITIES_H__

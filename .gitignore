@@ -12,3 +12,5 @@
 /SimpleATLCom_NET/*.ncb
 /COMBigInt/*.ncb
 /COMBigInt/Debug
+/COMBigInt_Client/*.ncb
+/COMBigInt_Client/Debug

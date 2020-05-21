@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0366 */
-/* at Thu May 21 11:30:32 2020
+/* at Thu May 21 14:10:26 2020
  */
 /* Compiler settings for .\COMBigInt.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -78,13 +78,6 @@ extern const MIDL_SERVER_INFO IAddition_ServerInfo;
 extern const MIDL_STUBLESS_PROXY_INFO IAddition_ProxyInfo;
 
 
-extern const MIDL_STUB_DESC Object_StubDesc;
-
-
-extern const MIDL_SERVER_INFO IMultiplication_ServerInfo;
-extern const MIDL_STUBLESS_PROXY_INFO IMultiplication_ProxyInfo;
-
-
 extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TABLE_SIZE ];
 
 #if !defined(__RPC_WIN32__)
@@ -106,9 +99,6 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Procedure get__operand_A */
 
-
-	/* Procedure get__operand_A */
-
 			0x33,		/* FC_AUTO_HANDLE */
 			0x6c,		/* Old Flags:  object, Oi2 */
 /*  2 */	NdrFcLong( 0x0 ),	/* 0 */
@@ -121,15 +111,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Parameter pVal */
 
-
-	/* Parameter pVal */
-
 /* 16 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 18 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 20 */	NdrFcShort( 0x1e ),	/* Type Offset=30 */
-
-	/* Return value */
-
 
 	/* Return value */
 
@@ -137,9 +121,6 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 24 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
 /* 26 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
-
-	/* Procedure put__operand_A */
-
 
 	/* Procedure put__operand_A */
 
@@ -155,15 +136,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Parameter newVal */
 
-
-	/* Parameter newVal */
-
 /* 44 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 46 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 48 */	NdrFcShort( 0x2c ),	/* Type Offset=44 */
-
-	/* Return value */
-
 
 	/* Return value */
 
@@ -171,9 +146,6 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 52 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
 /* 54 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
-
-	/* Procedure get__operand_B */
-
 
 	/* Procedure get__operand_B */
 
@@ -189,15 +161,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Parameter pVal */
 
-
-	/* Parameter pVal */
-
 /* 72 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 74 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 76 */	NdrFcShort( 0x1e ),	/* Type Offset=30 */
-
-	/* Return value */
-
 
 	/* Return value */
 
@@ -205,9 +171,6 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 80 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
 /* 82 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
-
-	/* Procedure put__operand_B */
-
 
 	/* Procedure put__operand_B */
 
@@ -223,15 +186,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Parameter newVal */
 
-
-	/* Parameter newVal */
-
 /* 100 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 102 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 104 */	NdrFcShort( 0x2c ),	/* Type Offset=44 */
-
-	/* Return value */
-
 
 	/* Return value */
 
@@ -239,9 +196,6 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 108 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
 /* 110 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
-
-	/* Procedure Calculate */
-
 
 	/* Procedure Calculate */
 
@@ -257,15 +211,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Parameter _result */
 
-
-	/* Parameter _result */
-
 /* 128 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 130 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 132 */	NdrFcShort( 0x1e ),	/* Type Offset=30 */
-
-	/* Return value */
-
 
 	/* Return value */
 
@@ -428,86 +376,6 @@ CInterfaceStubVtbl _IAdditionStubVtbl =
     CStdStubBuffer_DELEGATING_METHODS
 };
 
-
-/* Object interface: IMultiplication, ver. 0.0,
-   GUID={0x4D8093DC,0xCE8A,0x49ED,{0xB2,0x45,0xEF,0x66,0x11,0x1F,0x1A,0x2E}} */
-
-#pragma code_seg(".orpc")
-static const unsigned short IMultiplication_FormatStringOffsetTable[] =
-    {
-    (unsigned short) -1,
-    (unsigned short) -1,
-    (unsigned short) -1,
-    (unsigned short) -1,
-    0,
-    28,
-    56,
-    84,
-    112
-    };
-
-static const MIDL_STUBLESS_PROXY_INFO IMultiplication_ProxyInfo =
-    {
-    &Object_StubDesc,
-    __MIDL_ProcFormatString.Format,
-    &IMultiplication_FormatStringOffsetTable[-3],
-    0,
-    0,
-    0
-    };
-
-
-static const MIDL_SERVER_INFO IMultiplication_ServerInfo = 
-    {
-    &Object_StubDesc,
-    0,
-    __MIDL_ProcFormatString.Format,
-    &IMultiplication_FormatStringOffsetTable[-3],
-    0,
-    0,
-    0,
-    0};
-CINTERFACE_PROXY_VTABLE(12) _IMultiplicationProxyVtbl = 
-{
-    &IMultiplication_ProxyInfo,
-    &IID_IMultiplication,
-    IUnknown_QueryInterface_Proxy,
-    IUnknown_AddRef_Proxy,
-    IUnknown_Release_Proxy ,
-    0 /* (void *) (INT_PTR) -1 /* IDispatch::GetTypeInfoCount */ ,
-    0 /* (void *) (INT_PTR) -1 /* IDispatch::GetTypeInfo */ ,
-    0 /* (void *) (INT_PTR) -1 /* IDispatch::GetIDsOfNames */ ,
-    0 /* IDispatch_Invoke_Proxy */ ,
-    (void *) (INT_PTR) -1 /* IMultiplication::get__operand_A */ ,
-    (void *) (INT_PTR) -1 /* IMultiplication::put__operand_A */ ,
-    (void *) (INT_PTR) -1 /* IMultiplication::get__operand_B */ ,
-    (void *) (INT_PTR) -1 /* IMultiplication::put__operand_B */ ,
-    (void *) (INT_PTR) -1 /* IMultiplication::Calculate */
-};
-
-
-static const PRPC_STUB_FUNCTION IMultiplication_table[] =
-{
-    STUB_FORWARDING_FUNCTION,
-    STUB_FORWARDING_FUNCTION,
-    STUB_FORWARDING_FUNCTION,
-    STUB_FORWARDING_FUNCTION,
-    NdrStubCall2,
-    NdrStubCall2,
-    NdrStubCall2,
-    NdrStubCall2,
-    NdrStubCall2
-};
-
-CInterfaceStubVtbl _IMultiplicationStubVtbl =
-{
-    &IID_IMultiplication,
-    &IMultiplication_ServerInfo,
-    12,
-    &IMultiplication_table[-3],
-    CStdStubBuffer_DELEGATING_METHODS
-};
-
 static const MIDL_STUB_DESC Object_StubDesc = 
     {
     0,
@@ -535,27 +403,23 @@ static const MIDL_STUB_DESC Object_StubDesc =
 const CInterfaceProxyVtbl * _COMBigInt_ProxyVtblList[] = 
 {
     ( CInterfaceProxyVtbl *) &_IAdditionProxyVtbl,
-    ( CInterfaceProxyVtbl *) &_IMultiplicationProxyVtbl,
     0
 };
 
 const CInterfaceStubVtbl * _COMBigInt_StubVtblList[] = 
 {
     ( CInterfaceStubVtbl *) &_IAdditionStubVtbl,
-    ( CInterfaceStubVtbl *) &_IMultiplicationStubVtbl,
     0
 };
 
 PCInterfaceName const _COMBigInt_InterfaceNamesList[] = 
 {
     "IAddition",
-    "IMultiplication",
     0
 };
 
 const IID *  _COMBigInt_BaseIIDList[] = 
 {
-    &IID_IDispatch,
     &IID_IDispatch,
     0
 };
@@ -565,11 +429,14 @@ const IID *  _COMBigInt_BaseIIDList[] =
 
 int __stdcall _COMBigInt_IID_Lookup( const IID * pIID, int * pIndex )
 {
-    IID_BS_LOOKUP_SETUP
-
-    IID_BS_LOOKUP_INITIAL_TEST( _COMBigInt, 2, 1 )
-    IID_BS_LOOKUP_RETURN_RESULT( _COMBigInt, 2, *pIndex )
     
+    if(!_COMBigInt_CHECK_IID(0))
+        {
+        *pIndex = 0;
+        return 1;
+        }
+
+    return 0;
 }
 
 const ExtendedProxyFileInfo COMBigInt_ProxyFileInfo = 
@@ -579,7 +446,7 @@ const ExtendedProxyFileInfo COMBigInt_ProxyFileInfo =
     (const PCInterfaceName * ) & _COMBigInt_InterfaceNamesList,
     (const IID ** ) & _COMBigInt_BaseIIDList,
     & _COMBigInt_IID_Lookup, 
-    2,
+    1,
     2,
     0, /* table of [async_uuid] interfaces */
     0, /* Filler1 */

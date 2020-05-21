@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0366 */
-/* at Thu May 21 11:30:32 2020
+/* at Thu May 21 14:10:26 2020
  */
 /* Compiler settings for .\COMBigInt.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -51,12 +51,6 @@ typedef interface IAddition IAddition;
 #endif 	/* __IAddition_FWD_DEFINED__ */
 
 
-#ifndef __IMultiplication_FWD_DEFINED__
-#define __IMultiplication_FWD_DEFINED__
-typedef interface IMultiplication IMultiplication;
-#endif 	/* __IMultiplication_FWD_DEFINED__ */
-
-
 #ifndef __Addition_FWD_DEFINED__
 #define __Addition_FWD_DEFINED__
 
@@ -67,18 +61,6 @@ typedef struct Addition Addition;
 #endif /* __cplusplus */
 
 #endif 	/* __Addition_FWD_DEFINED__ */
-
-
-#ifndef __Multiplication_FWD_DEFINED__
-#define __Multiplication_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class Multiplication Multiplication;
-#else
-typedef struct Multiplication Multiplication;
-#endif /* __cplusplus */
-
-#endif 	/* __Multiplication_FWD_DEFINED__ */
 
 
 /* header files for imported files */
@@ -312,226 +294,6 @@ void __RPC_STUB IAddition_Calculate_Stub(
 #endif 	/* __IAddition_INTERFACE_DEFINED__ */
 
 
-#ifndef __IMultiplication_INTERFACE_DEFINED__
-#define __IMultiplication_INTERFACE_DEFINED__
-
-/* interface IMultiplication */
-/* [unique][helpstring][nonextensible][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IMultiplication;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("4D8093DC-CE8A-49ED-B245-EF66111F1A2E")
-    IMultiplication : public IDispatch
-    {
-    public:
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get__operand_A( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put__operand_A( 
-            /* [in] */ BSTR newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get__operand_B( 
-            /* [retval][out] */ BSTR *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put__operand_B( 
-            /* [in] */ BSTR newVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Calculate( 
-            /* [retval][out] */ BSTR *_result) = 0;
-        
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct IMultiplicationVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMultiplication * This,
-            /* [in] */ REFIID riid,
-            /* [iid_is][out] */ void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMultiplication * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMultiplication * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IMultiplication * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IMultiplication * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IMultiplication * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IMultiplication * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__operand_A )( 
-            IMultiplication * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put__operand_A )( 
-            IMultiplication * This,
-            /* [in] */ BSTR newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__operand_B )( 
-            IMultiplication * This,
-            /* [retval][out] */ BSTR *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put__operand_B )( 
-            IMultiplication * This,
-            /* [in] */ BSTR newVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Calculate )( 
-            IMultiplication * This,
-            /* [retval][out] */ BSTR *_result);
-        
-        END_INTERFACE
-    } IMultiplicationVtbl;
-
-    interface IMultiplication
-    {
-        CONST_VTBL struct IMultiplicationVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IMultiplication_QueryInterface(This,riid,ppvObject)	\
-    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
-
-#define IMultiplication_AddRef(This)	\
-    (This)->lpVtbl -> AddRef(This)
-
-#define IMultiplication_Release(This)	\
-    (This)->lpVtbl -> Release(This)
-
-
-#define IMultiplication_GetTypeInfoCount(This,pctinfo)	\
-    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
-
-#define IMultiplication_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
-
-#define IMultiplication_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
-
-#define IMultiplication_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
-
-
-#define IMultiplication_get__operand_A(This,pVal)	\
-    (This)->lpVtbl -> get__operand_A(This,pVal)
-
-#define IMultiplication_put__operand_A(This,newVal)	\
-    (This)->lpVtbl -> put__operand_A(This,newVal)
-
-#define IMultiplication_get__operand_B(This,pVal)	\
-    (This)->lpVtbl -> get__operand_B(This,pVal)
-
-#define IMultiplication_put__operand_B(This,newVal)	\
-    (This)->lpVtbl -> put__operand_B(This,newVal)
-
-#define IMultiplication_Calculate(This,_result)	\
-    (This)->lpVtbl -> Calculate(This,_result)
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE IMultiplication_get__operand_A_Proxy( 
-    IMultiplication * This,
-    /* [retval][out] */ BSTR *pVal);
-
-
-void __RPC_STUB IMultiplication_get__operand_A_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IMultiplication_put__operand_A_Proxy( 
-    IMultiplication * This,
-    /* [in] */ BSTR newVal);
-
-
-void __RPC_STUB IMultiplication_put__operand_A_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE IMultiplication_get__operand_B_Proxy( 
-    IMultiplication * This,
-    /* [retval][out] */ BSTR *pVal);
-
-
-void __RPC_STUB IMultiplication_get__operand_B_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IMultiplication_put__operand_B_Proxy( 
-    IMultiplication * This,
-    /* [in] */ BSTR newVal);
-
-
-void __RPC_STUB IMultiplication_put__operand_B_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE IMultiplication_Calculate_Proxy( 
-    IMultiplication * This,
-    /* [retval][out] */ BSTR *_result);
-
-
-void __RPC_STUB IMultiplication_Calculate_Stub(
-    IRpcStubBuffer *This,
-    IRpcChannelBuffer *_pRpcChannelBuffer,
-    PRPC_MESSAGE _pRpcMessage,
-    DWORD *_pdwStubPhase);
-
-
-
-#endif 	/* __IMultiplication_INTERFACE_DEFINED__ */
-
-
 
 #ifndef __COMBigIntLib_LIBRARY_DEFINED__
 #define __COMBigIntLib_LIBRARY_DEFINED__
@@ -548,14 +310,6 @@ EXTERN_C const CLSID CLSID_Addition;
 
 class DECLSPEC_UUID("00094B6D-D6AB-4C89-A5A5-6C337B279D7E")
 Addition;
-#endif
-
-EXTERN_C const CLSID CLSID_Multiplication;
-
-#ifdef __cplusplus
-
-class DECLSPEC_UUID("04DD5F6B-7977-40F7-92F4-85D305557A15")
-Multiplication;
 #endif
 #endif /* __COMBigIntLib_LIBRARY_DEFINED__ */
 

@@ -10,3 +10,5 @@
 /TestCOM/TestCOM.ncb
 /SimpleATLCom/*.ncb
 /SimpleATLCom_NET/*.ncb
+/COMBigInt/*.ncb
+/COMBigInt/Debug

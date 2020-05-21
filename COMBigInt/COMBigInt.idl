@@ -1,0 +1,70 @@
+// COMBigInt.idl : IDL source for COMBigInt
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (COMBigInt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(8FF4F805-2838-4086-8C90-E879BC9FCD28),
+	dual,
+	nonextensible,
+	helpstring("IAddition Interface"),
+	pointer_default(unique)
+]
+interface IAddition : IDispatch
+{
+	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] LONG* pVal);
+	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] LONG newVal);
+	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] LONG* pVal);
+	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] LONG newVal);
+	[id(3), helpstring("method Calculate")] HRESULT Calculate([out,retval] LONG* _result);
+};
+
+[
+	object,
+	uuid(4D8093DC-CE8A-49ED-B245-EF66111F1A2E),
+	dual,
+	nonextensible,
+	helpstring("IMultiplication Interface"),
+	pointer_default(unique)
+]
+interface IMultiplication : IDispatch
+{
+	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] LONG* pVal);
+	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] LONG newVal);
+	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] LONG* pVal);
+	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] LONG newVal);
+	[id(3), helpstring("method Calculate")] HRESULT Calculate([out,retval] LONG* _result);
+};
+
+[
+	uuid(76E29B3A-290D-4DAE-AB25-641E8DDD60EC),
+	version(1.0),
+	helpstring("COMBigInt 1.0 Type Library")
+]
+library COMBigIntLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		uuid(00094B6D-D6AB-4C89-A5A5-6C337B279D7E),
+		helpstring("Addition Class")
+	]
+	coclass Addition
+	{
+		[default] interface IAddition;
+	};
+
+	[
+		uuid(04DD5F6B-7977-40F7-92F4-85D305557A15),
+		helpstring("Multiplication Class")
+	]
+	coclass Multiplication
+	{
+		[default] interface IMultiplication;
+	};
+};

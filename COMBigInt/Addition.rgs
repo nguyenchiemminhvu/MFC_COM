@@ -1,0 +1,27 @@
+HKCR
+{
+	COMBigInt.Addition.1 = s 'Addition Class'
+	{
+		CLSID = s '{00094B6D-D6AB-4C89-A5A5-6C337B279D7E}'
+	}
+	COMBigInt.Addition = s 'Addition Class'
+	{
+		CLSID = s '{00094B6D-D6AB-4C89-A5A5-6C337B279D7E}'
+		CurVer = s 'COMBigInt.Addition.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {00094B6D-D6AB-4C89-A5A5-6C337B279D7E} = s 'Addition Class'
+		{
+			ProgID = s 'COMBigInt.Addition.1'
+			VersionIndependentProgID = s 'COMBigInt.Addition'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{76E29B3A-290D-4DAE-AB25-641E8DDD60EC}'
+		}
+	}
+}

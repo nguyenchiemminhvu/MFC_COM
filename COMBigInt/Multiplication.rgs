@@ -1,0 +1,27 @@
+HKCR
+{
+	COMBigInt.Multiplication.1 = s 'Multiplication Class'
+	{
+		CLSID = s '{04DD5F6B-7977-40F7-92F4-85D305557A15}'
+	}
+	COMBigInt.Multiplication = s 'Multiplication Class'
+	{
+		CLSID = s '{04DD5F6B-7977-40F7-92F4-85D305557A15}'
+		CurVer = s 'COMBigInt.Multiplication.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {04DD5F6B-7977-40F7-92F4-85D305557A15} = s 'Multiplication Class'
+		{
+			ProgID = s 'COMBigInt.Multiplication.1'
+			VersionIndependentProgID = s 'COMBigInt.Multiplication'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{76E29B3A-290D-4DAE-AB25-641E8DDD60EC}'
+		}
+	}
+}

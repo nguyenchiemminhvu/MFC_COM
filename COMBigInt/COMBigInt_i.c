@@ -6,7 +6,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0366 */
-/* at Thu May 21 10:48:45 2020
+/* at Thu May 21 11:30:32 2020
  */
 /* Compiler settings for .\COMBigInt.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)

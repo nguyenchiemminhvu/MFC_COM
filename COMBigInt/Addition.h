@@ -51,17 +51,17 @@ END_COM_MAP()
 
 public:
 
-	STDMETHOD(get__operand_A)(LONG* pVal);
-	STDMETHOD(put__operand_A)(LONG newVal);
-	STDMETHOD(get__operand_B)(LONG* pVal);
-	STDMETHOD(put__operand_B)(LONG newVal);
+	STDMETHOD(get__operand_A)(BSTR* pVal);
+	STDMETHOD(put__operand_A)(BSTR newVal);
+	STDMETHOD(get__operand_B)(BSTR* pVal);
+	STDMETHOD(put__operand_B)(BSTR newVal);
 
-	STDMETHOD(Calculate)(LONG* _result);
+	STDMETHOD(Calculate)(BSTR* _result);
 
 private:
 	
-	long _operand_A;
-	long _operand_B;
+	CComBSTR _operand_A;
+	CComBSTR _operand_B;
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(Addition), CAddition)

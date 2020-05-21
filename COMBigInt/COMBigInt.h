@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0366 */
-/* at Thu May 21 10:48:45 2020
+/* at Thu May 21 11:30:32 2020
  */
 /* Compiler settings for .\COMBigInt.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -108,19 +108,19 @@ EXTERN_C const IID IID_IAddition;
     {
     public:
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get__operand_A( 
-            /* [retval][out] */ LONG *pVal) = 0;
+            /* [retval][out] */ BSTR *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put__operand_A( 
-            /* [in] */ LONG newVal) = 0;
+            /* [in] */ BSTR newVal) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get__operand_B( 
-            /* [retval][out] */ LONG *pVal) = 0;
+            /* [retval][out] */ BSTR *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put__operand_B( 
-            /* [in] */ LONG newVal) = 0;
+            /* [in] */ BSTR newVal) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Calculate( 
-            /* [retval][out] */ LONG *_result) = 0;
+            /* [out] */ BSTR *_result) = 0;
         
     };
     
@@ -172,23 +172,23 @@ EXTERN_C const IID IID_IAddition;
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__operand_A )( 
             IAddition * This,
-            /* [retval][out] */ LONG *pVal);
+            /* [retval][out] */ BSTR *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put__operand_A )( 
             IAddition * This,
-            /* [in] */ LONG newVal);
+            /* [in] */ BSTR newVal);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__operand_B )( 
             IAddition * This,
-            /* [retval][out] */ LONG *pVal);
+            /* [retval][out] */ BSTR *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put__operand_B )( 
             IAddition * This,
-            /* [in] */ LONG newVal);
+            /* [in] */ BSTR newVal);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Calculate )( 
             IAddition * This,
-            /* [retval][out] */ LONG *_result);
+            /* [out] */ BSTR *_result);
         
         END_INTERFACE
     } IAdditionVtbl;
@@ -250,7 +250,7 @@ EXTERN_C const IID IID_IAddition;
 
 /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE IAddition_get__operand_A_Proxy( 
     IAddition * This,
-    /* [retval][out] */ LONG *pVal);
+    /* [retval][out] */ BSTR *pVal);
 
 
 void __RPC_STUB IAddition_get__operand_A_Stub(
@@ -262,7 +262,7 @@ void __RPC_STUB IAddition_get__operand_A_Stub(
 
 /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IAddition_put__operand_A_Proxy( 
     IAddition * This,
-    /* [in] */ LONG newVal);
+    /* [in] */ BSTR newVal);
 
 
 void __RPC_STUB IAddition_put__operand_A_Stub(
@@ -274,7 +274,7 @@ void __RPC_STUB IAddition_put__operand_A_Stub(
 
 /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE IAddition_get__operand_B_Proxy( 
     IAddition * This,
-    /* [retval][out] */ LONG *pVal);
+    /* [retval][out] */ BSTR *pVal);
 
 
 void __RPC_STUB IAddition_get__operand_B_Stub(
@@ -286,7 +286,7 @@ void __RPC_STUB IAddition_get__operand_B_Stub(
 
 /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IAddition_put__operand_B_Proxy( 
     IAddition * This,
-    /* [in] */ LONG newVal);
+    /* [in] */ BSTR newVal);
 
 
 void __RPC_STUB IAddition_put__operand_B_Stub(
@@ -298,7 +298,7 @@ void __RPC_STUB IAddition_put__operand_B_Stub(
 
 /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE IAddition_Calculate_Proxy( 
     IAddition * This,
-    /* [retval][out] */ LONG *_result);
+    /* [out] */ BSTR *_result);
 
 
 void __RPC_STUB IAddition_Calculate_Stub(
@@ -328,19 +328,19 @@ EXTERN_C const IID IID_IMultiplication;
     {
     public:
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get__operand_A( 
-            /* [retval][out] */ LONG *pVal) = 0;
+            /* [retval][out] */ BSTR *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put__operand_A( 
-            /* [in] */ LONG newVal) = 0;
+            /* [in] */ BSTR newVal) = 0;
         
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get__operand_B( 
-            /* [retval][out] */ LONG *pVal) = 0;
+            /* [retval][out] */ BSTR *pVal) = 0;
         
         virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put__operand_B( 
-            /* [in] */ LONG newVal) = 0;
+            /* [in] */ BSTR newVal) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Calculate( 
-            /* [retval][out] */ LONG *_result) = 0;
+            /* [retval][out] */ BSTR *_result) = 0;
         
     };
     
@@ -392,23 +392,23 @@ EXTERN_C const IID IID_IMultiplication;
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__operand_A )( 
             IMultiplication * This,
-            /* [retval][out] */ LONG *pVal);
+            /* [retval][out] */ BSTR *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put__operand_A )( 
             IMultiplication * This,
-            /* [in] */ LONG newVal);
+            /* [in] */ BSTR newVal);
         
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__operand_B )( 
             IMultiplication * This,
-            /* [retval][out] */ LONG *pVal);
+            /* [retval][out] */ BSTR *pVal);
         
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put__operand_B )( 
             IMultiplication * This,
-            /* [in] */ LONG newVal);
+            /* [in] */ BSTR newVal);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Calculate )( 
             IMultiplication * This,
-            /* [retval][out] */ LONG *_result);
+            /* [retval][out] */ BSTR *_result);
         
         END_INTERFACE
     } IMultiplicationVtbl;
@@ -470,7 +470,7 @@ EXTERN_C const IID IID_IMultiplication;
 
 /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE IMultiplication_get__operand_A_Proxy( 
     IMultiplication * This,
-    /* [retval][out] */ LONG *pVal);
+    /* [retval][out] */ BSTR *pVal);
 
 
 void __RPC_STUB IMultiplication_get__operand_A_Stub(
@@ -482,7 +482,7 @@ void __RPC_STUB IMultiplication_get__operand_A_Stub(
 
 /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IMultiplication_put__operand_A_Proxy( 
     IMultiplication * This,
-    /* [in] */ LONG newVal);
+    /* [in] */ BSTR newVal);
 
 
 void __RPC_STUB IMultiplication_put__operand_A_Stub(
@@ -494,7 +494,7 @@ void __RPC_STUB IMultiplication_put__operand_A_Stub(
 
 /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE IMultiplication_get__operand_B_Proxy( 
     IMultiplication * This,
-    /* [retval][out] */ LONG *pVal);
+    /* [retval][out] */ BSTR *pVal);
 
 
 void __RPC_STUB IMultiplication_get__operand_B_Stub(
@@ -506,7 +506,7 @@ void __RPC_STUB IMultiplication_get__operand_B_Stub(
 
 /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE IMultiplication_put__operand_B_Proxy( 
     IMultiplication * This,
-    /* [in] */ LONG newVal);
+    /* [in] */ BSTR newVal);
 
 
 void __RPC_STUB IMultiplication_put__operand_B_Stub(
@@ -518,7 +518,7 @@ void __RPC_STUB IMultiplication_put__operand_B_Stub(
 
 /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE IMultiplication_Calculate_Proxy( 
     IMultiplication * This,
-    /* [retval][out] */ LONG *_result);
+    /* [retval][out] */ BSTR *_result);
 
 
 void __RPC_STUB IMultiplication_Calculate_Stub(
@@ -560,6 +560,11 @@ Multiplication;
 #endif /* __COMBigIntLib_LIBRARY_DEFINED__ */
 
 /* Additional Prototypes for ALL interfaces */
+
+unsigned long             __RPC_USER  BSTR_UserSize(     unsigned long *, unsigned long            , BSTR * ); 
+unsigned char * __RPC_USER  BSTR_UserMarshal(  unsigned long *, unsigned char *, BSTR * ); 
+unsigned char * __RPC_USER  BSTR_UserUnmarshal(unsigned long *, unsigned char *, BSTR * ); 
+void                      __RPC_USER  BSTR_UserFree(     unsigned long *, BSTR * ); 
 
 /* end of Additional Prototypes */
 

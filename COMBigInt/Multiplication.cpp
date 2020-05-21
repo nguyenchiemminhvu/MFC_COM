@@ -1,8 +1,14 @@
 // Multiplication.cpp : Implementation of CMultiplication
 
 #include "stdafx.h"
+#include "Utilities.h"
 #include "Multiplication.h"
 
+#include <vector>
+#include <string>
+#include <sstream>
+#include <comutil.h>
+#pragma comment(lib,"comsuppw.lib")
 
 // CMultiplication
 
@@ -21,37 +27,42 @@ STDMETHODIMP CMultiplication::InterfaceSupportsErrorInfo(REFIID riid)
 	return S_FALSE;
 }
 
-STDMETHODIMP CMultiplication::get__operand_A(LONG* pVal)
+STDMETHODIMP CMultiplication::get__operand_A(BSTR* pVal)
 {
 	// TODO: Add your implementation code here
-	*pVal = _operand_A;
+	*pVal = _operand_A.Copy();
 	return S_OK;
 }
 
-STDMETHODIMP CMultiplication::put__operand_A(LONG newVal)
+STDMETHODIMP CMultiplication::put__operand_A(BSTR newVal)
 {
 	// TODO: Add your implementation code here
 	_operand_A = newVal;
 	return S_OK;
 }
 
-STDMETHODIMP CMultiplication::get__operand_B(LONG* pVal)
+STDMETHODIMP CMultiplication::get__operand_B(BSTR* pVal)
 {
 	// TODO: Add your implementation code here
-	*pVal = _operand_B;
+	*pVal = _operand_B.Copy();
 	return S_OK;
 }
 
-STDMETHODIMP CMultiplication::put__operand_B(LONG newVal)
+STDMETHODIMP CMultiplication::put__operand_B(BSTR newVal)
 {
 	// TODO: Add your implementation code here
 	_operand_B = newVal;
 	return S_OK;
 }
 
-STDMETHODIMP CMultiplication::Calculate(LONG* _result)
+STDMETHODIMP CMultiplication::Calculate(BSTR* _result)
 {
 	// TODO: Add your implementation code here
-	*_result = _operand_A * _operand_B;
+	std::string a = BStrToSTDStr(_operand_A);
+	std::string b = BStrToSTDStr(_operand_B);
+	std::string mul = multiplyTwoStrings(a, b);
+	BSTR res = STDStrToBStr(mul);
+
+	*_result = res;
 	return S_OK;
 }

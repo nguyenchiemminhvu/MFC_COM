@@ -17,11 +17,12 @@ import "ocidl.idl";
 ]
 interface IAddition : IDispatch
 {
-	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] LONG* pVal);
-	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] LONG newVal);
-	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] LONG* pVal);
-	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] LONG newVal);
-	[id(3), helpstring("method Calculate")] HRESULT Calculate([out,retval] LONG* _result);
+	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] BSTR* pVal);
+	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] BSTR newVal);
+	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] BSTR* pVal);
+	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] BSTR newVal);
+
+	[id(3), helpstring("method Calculate")] HRESULT Calculate([out] BSTR* _result);
 };
 
 [
@@ -34,11 +35,12 @@ interface IAddition : IDispatch
 ]
 interface IMultiplication : IDispatch
 {
-	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] LONG* pVal);
-	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] LONG newVal);
-	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] LONG* pVal);
-	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] LONG newVal);
-	[id(3), helpstring("method Calculate")] HRESULT Calculate([out,retval] LONG* _result);
+	[propget, id(1), helpstring("property _operand_A")] HRESULT _operand_A([out, retval] BSTR* pVal);
+	[propput, id(1), helpstring("property _operand_A")] HRESULT _operand_A([in] BSTR newVal);
+	[propget, id(2), helpstring("property _operand_B")] HRESULT _operand_B([out, retval] BSTR* pVal);
+	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] BSTR newVal);
+
+	[id(3), helpstring("method Calculate")] HRESULT Calculate([out,retval] BSTR* _result);
 };
 
 [

@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0366 */
-/* at Thu May 21 14:10:26 2020
+/* at Thu May 21 15:18:07 2020
  */
 /* Compiler settings for .\COMBigInt.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -46,7 +46,7 @@
 #include "COMBigInt.h"
 
 #define TYPE_FORMAT_STRING_SIZE   55                                
-#define PROC_FORMAT_STRING_SIZE   141                               
+#define PROC_FORMAT_STRING_SIZE   163                               
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   1            
 
@@ -222,6 +222,25 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 138 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
+	/* Procedure ShowTestDialog */
+
+/* 140 */	0x33,		/* FC_AUTO_HANDLE */
+			0x6c,		/* Old Flags:  object, Oi2 */
+/* 142 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 146 */	NdrFcShort( 0xc ),	/* 12 */
+/* 148 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 150 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 152 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 154 */	0x4,		/* Oi2 Flags:  has return, */
+			0x1,		/* 1 */
+
+	/* Return value */
+
+/* 156 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 158 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/* 160 */	0x8,		/* FC_LONG */
+			0x0,		/* 0 */
+
 			0x0
         }
     };
@@ -311,7 +330,8 @@ static const unsigned short IAddition_FormatStringOffsetTable[] =
     28,
     56,
     84,
-    112
+    112,
+    140
     };
 
 static const MIDL_STUBLESS_PROXY_INFO IAddition_ProxyInfo =
@@ -335,7 +355,7 @@ static const MIDL_SERVER_INFO IAddition_ServerInfo =
     0,
     0,
     0};
-CINTERFACE_PROXY_VTABLE(12) _IAdditionProxyVtbl = 
+CINTERFACE_PROXY_VTABLE(13) _IAdditionProxyVtbl = 
 {
     &IAddition_ProxyInfo,
     &IID_IAddition,
@@ -350,7 +370,8 @@ CINTERFACE_PROXY_VTABLE(12) _IAdditionProxyVtbl =
     (void *) (INT_PTR) -1 /* IAddition::put__operand_A */ ,
     (void *) (INT_PTR) -1 /* IAddition::get__operand_B */ ,
     (void *) (INT_PTR) -1 /* IAddition::put__operand_B */ ,
-    (void *) (INT_PTR) -1 /* IAddition::Calculate */
+    (void *) (INT_PTR) -1 /* IAddition::Calculate */ ,
+    (void *) (INT_PTR) -1 /* IAddition::ShowTestDialog */
 };
 
 
@@ -364,6 +385,7 @@ static const PRPC_STUB_FUNCTION IAddition_table[] =
     NdrStubCall2,
     NdrStubCall2,
     NdrStubCall2,
+    NdrStubCall2,
     NdrStubCall2
 };
 
@@ -371,7 +393,7 @@ CInterfaceStubVtbl _IAdditionStubVtbl =
 {
     &IID_IAddition,
     &IAddition_ServerInfo,
-    12,
+    13,
     &IAddition_table[-3],
     CStdStubBuffer_DELEGATING_METHODS
 };

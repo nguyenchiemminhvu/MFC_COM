@@ -247,6 +247,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\TestDialog.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Utilities.cpp"
 				>
 			</File>
@@ -266,6 +270,10 @@
 			</File>
 			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\TestDialog.h"
 				>
 			</File>
 			<File

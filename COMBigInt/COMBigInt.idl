@@ -23,6 +23,7 @@ interface IAddition : IDispatch
 	[propput, id(2), helpstring("property _operand_B")] HRESULT _operand_B([in] BSTR newVal);
 
 	[id(3), helpstring("method Calculate")] HRESULT Calculate([out] BSTR* _result);
+	[id(4), helpstring("method ShowTestDialog")] HRESULT ShowTestDialog(void);
 };
 
 [

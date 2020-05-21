@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0366 */
-/* at Thu May 21 14:10:26 2020
+/* at Thu May 21 15:18:07 2020
  */
 /* Compiler settings for .\COMBigInt.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -104,6 +104,8 @@ EXTERN_C const IID IID_IAddition;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Calculate( 
             /* [out] */ BSTR *_result) = 0;
         
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ShowTestDialog( void) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -172,6 +174,9 @@ EXTERN_C const IID IID_IAddition;
             IAddition * This,
             /* [out] */ BSTR *_result);
         
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ShowTestDialog )( 
+            IAddition * This);
+        
         END_INTERFACE
     } IAdditionVtbl;
 
@@ -222,6 +227,9 @@ EXTERN_C const IID IID_IAddition;
 
 #define IAddition_Calculate(This,_result)	\
     (This)->lpVtbl -> Calculate(This,_result)
+
+#define IAddition_ShowTestDialog(This)	\
+    (This)->lpVtbl -> ShowTestDialog(This)
 
 #endif /* COBJMACROS */
 
@@ -284,6 +292,17 @@ void __RPC_STUB IAddition_put__operand_B_Stub(
 
 
 void __RPC_STUB IAddition_Calculate_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE IAddition_ShowTestDialog_Proxy( 
+    IAddition * This);
+
+
+void __RPC_STUB IAddition_ShowTestDialog_Stub(
     IRpcStubBuffer *This,
     IRpcChannelBuffer *_pRpcChannelBuffer,
     PRPC_MESSAGE _pRpcMessage,

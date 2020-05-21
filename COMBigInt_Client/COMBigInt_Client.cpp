@@ -32,6 +32,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			char s[255];
 			strcpy_s(s, test.length() + 1, test);
 			printf("%s\n", s);
+
+			iAdd->ShowTestDialog();
 		}
 	}
 

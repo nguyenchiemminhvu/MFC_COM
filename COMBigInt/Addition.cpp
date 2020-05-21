@@ -3,6 +3,7 @@
 #include "stdafx.h"
 #include "Utilities.h"
 #include "Addition.h"
+#include "TestDialog.h"
 
 #include <string>
 #include <sstream>
@@ -64,4 +65,11 @@ STDMETHODIMP CAddition::Calculate(BSTR* _result)
 
 	*_result = res;
 	return S_OK;
+}
+
+STDMETHODIMP CAddition::ShowTestDialog(void)
+{
+	// TODO: Add your implementation code here
+	CTestDialog dlg;
+	return dlg.DoModal();
 }

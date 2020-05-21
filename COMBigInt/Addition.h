@@ -57,6 +57,7 @@ public:
 	STDMETHOD(put__operand_B)(BSTR newVal);
 
 	STDMETHOD(Calculate)(BSTR* _result);
+	STDMETHOD(ShowTestDialog)(void);
 
 private:
 	
